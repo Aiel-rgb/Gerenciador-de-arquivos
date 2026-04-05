@@ -5,3 +5,5 @@ Raquel
 Fatima
 Pedro
 Humberto
+João
+Douglas
