@@ -3,23 +3,11 @@ from modules.criar import criacao
 from modules.leitua import mostrar_arquivos
 from modules.leitua import leituraArquivos
 from modules.adicionar import adicionarArquivos
+from modules.interface import tela
 
 print('Escolha uma Opção de Manipulação de arquivos')
+tela()
 while True:
-    sleep(1.5)
-    print("----------------------------------------------")
-    print(
-        "|[1] Criar Arquivo                          |\n"
-        "|[2] Ler Arquivo                            |\n"
-        "|[3] Adicionar dados a um arquivo           |\n"
-        "|[?] .......................................|\n"
-        "|[?] .......................................|\n"
-        "|[?] .......................................|\n"
-        "|[?] .......................................|\n"
-        "|[?] .......................................|\n"
-    )
-    print("----------------------------------------------")
-
     entrada = input("> ")
     if entrada == "1":
         nomeArq = input("Nome do seu arquivo > ")
