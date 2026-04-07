@@ -1,7 +1,8 @@
 import os
 import pyfiglet
 
-cor = "\033[0;34m"
+vermelho = "\033[0;31m"
+azul = "\033[0;34m"
 reset = '\033[0m'
 
 def tela():
@@ -14,7 +15,7 @@ def tela():
     separador = '-'*largura
 
     print(separador)
-    print(cor + titulo + reset)
+    print(azul + titulo + reset)
     print(separador)
     print()
 
@@ -22,7 +23,9 @@ def tela():
         "[1] Criar Arquivo                          ",
         "[2] Ler Arquivo                            ",
         "[3] Adicionar dados a um arquivo           ",
-        "[S] Sair",
+        "[4] Remover dados de um arquivo            ",
+        "[5] Remover um arquivo                     ",
+        vermelho + "[S] Sair" + reset,
     ]
 
     for opcao in opcoes:

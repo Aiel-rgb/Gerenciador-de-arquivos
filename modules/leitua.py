@@ -1,17 +1,24 @@
 import os
+from time import sleep
 
 def leituraArquivos (arq):
-    caminho = os.path.join("arquivos",arq + ".txt")
-
-    if not os.path.exists(caminho):
+    pasta = "arquivos"
+    arquivos = os.listdir(pasta)
+    arquivo_encontrado = None
+    for f in arquivos:
+        if f.lower().endswith('.txt') and f.lower().replace('.txt', '') == arq:
+            arquivo_encontrado = f
+            break
+    if not arquivo_encontrado:
         print(f"Arquivo '{arq}' não encontrado.")
         return None
-
+    caminho = os.path.join(pasta, arquivo_encontrado)
     with open(caminho,"r") as arquivo:
-        linhas = arquivo.read().strip().split("\n")
-    
+        linhas = arquivo.readlines()
+    sleep(0.5)
     for linha in linhas:
-        print(linha)
+        print(linha.rstrip('\n'))
+    return linhas
 
 def mostrar_arquivos():
     pasta = "arquivos"
@@ -20,7 +27,7 @@ def mostrar_arquivos():
         print("Nenhum arquivo encontrado.")
         return
     
-    print(f"\n📁 {pasta}")
+    print(f"📁 {pasta}")
     for arquivo in os.listdir(pasta):
-        print(f"\n l__ {arquivo}\n")
+        print(f"    ├── {arquivo}")
     

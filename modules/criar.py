@@ -20,3 +20,4 @@ def criacao (arq):
         else:
             print("Escreva Sim ou Não")
     return arqTexto
+
