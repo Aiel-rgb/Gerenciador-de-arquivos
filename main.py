@@ -13,7 +13,7 @@ print('Escolha uma Opção de Manipulação de arquivos')
 while True:
     sleep(1.25)
     tela()
-    entrada = input("> ")
+    entrada = input("> ").lower().strip()
     if entrada == "1":
         nomeArq = input("Nome do seu arquivo > ").lower().strip()
         criacao(nomeArq)
@@ -41,8 +41,18 @@ while True:
         print("============")
         remover_arquivo(rem)
         print("============")
-    elif entrada.lower().strip() == "sair":
-        print("Saindo...") 
+    elif entrada == "6":
+        pass
+    elif entrada == "7":
+        pass
+    elif entrada == "8":
+        pass
+    elif entrada == "9":
+        pass
+    elif entrada == "10":
+        pass
+    elif entrada in {"sair", "s"}:
+        print("Saindo...")
         break
     else:
         print("\033[0;31m Escolha uma das alternativas corretamente!\033[0m")
