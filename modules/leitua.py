@@ -1,5 +1,4 @@
 import os
-from time import sleep
 
 def leituraArquivos (arq):
     pasta = "arquivos"
@@ -15,7 +14,6 @@ def leituraArquivos (arq):
     caminho = os.path.join(pasta, arquivo_encontrado)
     with open(caminho,"r") as arquivo:
         linhas = arquivo.readlines()
-    sleep(0.5)
     for linha in linhas:
         print(linha.rstrip('\n'))
     return linhas
